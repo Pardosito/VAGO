@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hojalateria Vago | Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gallery Specific Styles */
+        .gallery-header {
+            text-align: center;
+            padding: 4rem 10% 2rem;
+        }
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .filter-btn {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        .filter-btn.active {
+            background-color: var(--accent-red);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 0 10% 5rem;
+        }
+        .gallery-item {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .gallery-item.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/200x60?text=Logo+Hojalateria" alt="Hojalateria Vago Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" style="height: 40vh;">
+        <img src="https://via.placeholder.com/1920x400?text=Galeria+Hero" alt="Galeria">
+    </header>
+
+    <div class="gallery-header">
+        <span class="badge">Nuestra Historia</span> <h2>Galeria</h2>
+
+        <div class="filter-buttons">
+            <button class="btn filter-btn active" data-filter="all">Todo</button>
+            <button class="btn filter-btn" data-filter="trabajos">Trabajos</button>
+            <button class="btn filter-btn" data-filter="productos">Productos</button>
+        </div>
+    </div>
+
+    <div class="gallery-grid" id="gallery">
+        <img src="https://via.placeholder.com/400x300?text=Trabajo+1" class="gallery-item trabajos" alt="Trabajo">
+        <img src="https://via.placeholder.com/300x400?text=Producto+1" class="gallery-item productos" alt="Producto">
+        <img src="https://via.placeholder.com/400x400?text=Trabajo+2" class="gallery-item trabajos" alt="Trabajo">
+        <img src="https://via.placeholder.com/400x250?text=Producto+2" class="gallery-item productos" alt="Producto">
+        <img src="https://via.placeholder.com/350x350?text=Trabajo+3" class="gallery-item trabajos" alt="Trabajo">
+        <img src="https://via.placeholder.com/400x500?text=Producto+3" class="gallery-item productos" alt="Producto">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
