@@ -5,77 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hojalateria Vago | Galeria</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Gallery Specific Styles */
-        .gallery-header {
-            text-align: center;
-            padding: 4rem 10% 2rem;
-        }
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .filter-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
-        }
-        .filter-btn.active {
-            background-color: var(--accent-red);
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            padding: 0 10% 5rem;
-        }
-        .gallery-item {
-            width: 100%;
-            border-radius: 15px;
-            object-fit: cover;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-        .gallery-item.hide {
-            display: none;
-        }
-    </style>
 </head>
 <body>
+    <div class="site-shell">
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <img src="./assets/png/LogoPNG (1).png" alt="Hojalateria Vago Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a class="active" href="galeria.html">Galeria</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
 
-    <nav class="navbar">
-        <div class="logo">
-            <img src="https://via.placeholder.com/200x60?text=Logo+Hojalateria" alt="Hojalateria Vago Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="contactanos.html">Contáctanos</a></li>
-        </ul>
-    </nav>
+        <header class="hero">
+            <img src="./assets/images/VAGO-01.jpg" alt="Trabajos de galeria">
+        </header>
 
-    <header class="hero" style="height: 40vh;">
-        <img src="https://via.placeholder.com/1920x400?text=Galeria+Hero" alt="Galeria">
-    </header>
+        <main class="page-content">
+            <section class="gallery-header">
+                <span class="badge">Nuestro trabajo</span>
+                <h1>Galeria</h1>
+                <div class="gallery-controls">
+                    <button class="filter-btn active" data-filter="all">Todo</button>
+                    <button class="filter-btn" data-filter="fabricacion">Fabricacion</button>
+                    <button class="filter-btn" data-filter="soldadura">Soldadura</button>
+                    <button class="filter-btn" data-filter="instalacion">Instalacion</button>
+                </div>
+            </section>
 
-    <div class="gallery-header">
-        <span class="badge">Nuestra Historia</span> <h2>Galeria</h2>
+            <section class="gallery-grid" id="gallery">
+                <figure class="gallery-item lg fabricacion">
+                    <img src="./assets/images/VAGO-02.jpg" alt="Fabricacion de mobiliario metalico">
+                </figure>
+                <figure class="gallery-item md soldadura">
+                    <img src="./assets/images/VAGO-12.jpg" alt="Proceso de soldadura">
+                </figure>
+                <figure class="gallery-item sm soldadura tall">
+                    <img src="./assets/images/VAGO-03.jpg" alt="Trabajo de soldador en taller">
+                </figure>
+                <figure class="gallery-item sm instalacion">
+                    <img src="./assets/images/VAGO-14.jpg" alt="Instalacion de estructura metalica">
+                </figure>
+                <figure class="gallery-item sm fabricacion">
+                    <img src="./assets/images/VAGO-18.jpg" alt="Fabricacion de campana de acero">
+                </figure>
+                <figure class="gallery-item lg fabricacion">
+                    <img src="./assets/images/VAGO-35.jpg" alt="Pieza metalica terminada">
+                </figure>
+                <figure class="gallery-item lg soldadura">
+                    <img src="./assets/images/VAGO-06.jpg" alt="Soldadura en acero inoxidable">
+                </figure>
+                <figure class="gallery-item lg instalacion">
+                    <img src="./assets/images/VAGO-08.jpg" alt="Equipo en proceso de instalacion">
+                </figure>
+                <figure class="gallery-item md instalacion">
+                    <img src="./assets/images/VAGO-23.jpg" alt="Detalle de estructura instalada">
+                </figure>
+                <figure class="gallery-item sm soldadura">
+                    <img src="./assets/images/VAGO-17.jpg" alt="Soldadura de precision">
+                </figure>
+                <figure class="gallery-item sm fabricacion">
+                    <img src="./assets/images/VAGO-11.jpg" alt="Mesa metalica en armado">
+                </figure>
+                <figure class="gallery-item md fabricacion">
+                    <img src="./assets/images/VAGO-30.jpg" alt="Trabajo de fabricacion en planta">
+                </figure>
+                <figure class="gallery-item md soldadura">
+                    <img src="./assets/images/VAGO-09.jpg" alt="Trabajador usando equipo de soldar">
+                </figure>
+                <figure class="gallery-item md instalacion">
+                    <img src="./assets/images/VAGO-25.jpg" alt="Ajuste de instalacion metalica">
+                </figure>
+            </section>
+        </main>
 
-        <div class="filter-buttons">
-            <button class="btn filter-btn active" data-filter="all">Todo</button>
-            <button class="btn filter-btn" data-filter="trabajos">Trabajos</button>
-            <button class="btn filter-btn" data-filter="productos">Productos</button>
-        </div>
-    </div>
-
-    <div class="gallery-grid" id="gallery">
-        <img src="https://via.placeholder.com/400x300?text=Trabajo+1" class="gallery-item trabajos" alt="Trabajo">
-        <img src="https://via.placeholder.com/300x400?text=Producto+1" class="gallery-item productos" alt="Producto">
-        <img src="https://via.placeholder.com/400x400?text=Trabajo+2" class="gallery-item trabajos" alt="Trabajo">
-        <img src="https://via.placeholder.com/400x250?text=Producto+2" class="gallery-item productos" alt="Producto">
-        <img src="https://via.placeholder.com/350x350?text=Trabajo+3" class="gallery-item trabajos" alt="Trabajo">
-        <img src="https://via.placeholder.com/400x500?text=Producto+3" class="gallery-item productos" alt="Producto">
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="./assets/png/LogoPNG (1).png" alt="Logo Vago">
+                </div>
+                <div class="footer-col">
+                    <h4>Nuestro sitio</h4>
+                    <ul>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>6646783939</p>
+                    <p>hojalateriavago@hotmail.com</p>
+                    <p>Ave. 9na y Madero. Zona Centro.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><img src="./assets/svg/Facebook.svg" alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="./assets/svg/Instagram.svg" alt="Instagram"></a>
+                        <a href="#" aria-label="TikTok"><img src="./assets/svg/Tik Tok.svg" alt="TikTok"></a>
+                        <a href="#" aria-label="Ubicacion"><img src="./assets/svg/GoogleMaps.svg" alt="Ubicacion"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>All rights are reserved for ©hojalateriavago S.A. de C.V 2025</p>
+                <p><a href="terminos.html">User Terms & Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
+            </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>

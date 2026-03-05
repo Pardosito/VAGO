@@ -1,21 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (!filterButtons.length || !galleryItems.length) {
+        return;
+    }
 
     filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+        button.addEventListener("click", () => {
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
 
-            const filterValue = button.getAttribute('data-filter');
+            const filterValue = button.dataset.filter;
 
             galleryItems.forEach(item => {
-                if (filterValue === 'all') {
-                    item.classList.remove('hide');
-                } else if (item.classList.contains(filterValue)) {
-                    item.classList.remove('hide');
+                if (filterValue === "all" || item.classList.contains(filterValue)) {
+                    item.classList.remove("is-hidden");
                 } else {
-                    item.classList.add('hide');
+                    item.classList.add("is-hidden");
                 }
             });
         });
