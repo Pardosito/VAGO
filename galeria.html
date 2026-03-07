@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="site-shell">
+        <div class="navbar-wrapper">
         <nav class="navbar">
             <a class="logo" href="index.html">
                 <img src="./assets/png/LogoPNG (1).png" alt="Hojalateria Vago Logo">
@@ -18,7 +19,19 @@
                 <li><a class="active" href="galeria.html">Galeria</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
             </ul>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a class="active" href="galeria.html">Galeria</a>
+            <a href="contactanos.html">Contáctanos</a>
+        </div>
 
         <header class="hero">
             <img src="./assets/images/VAGO-01.jpg" alt="Trabajos de galeria">
@@ -26,59 +39,73 @@
 
         <main class="page-content">
             <section class="gallery-header">
-                <span class="badge">Nuestro trabajo</span>
+                <span class="badge">Nuestra historia</span>
                 <h1>Galeria</h1>
                 <div class="gallery-controls">
                     <button class="filter-btn active" data-filter="all">Todo</button>
-                    <button class="filter-btn" data-filter="fabricacion">Fabricacion</button>
-                    <button class="filter-btn" data-filter="soldadura">Soldadura</button>
-                    <button class="filter-btn" data-filter="instalacion">Instalacion</button>
+                    <button class="filter-btn" data-filter="trabajos">Trabajos</button>
+                    <button class="filter-btn" data-filter="productos">Productos</button>
                 </div>
             </section>
 
             <section class="gallery-grid" id="gallery">
-                <figure class="gallery-item lg fabricacion">
-                    <img src="./assets/images/VAGO-02.jpg" alt="Fabricacion de mobiliario metalico">
+
+                <!-- Row 1: wide | tall (spans rows 1–2) -->
+                <figure class="gallery-item gi-wide trabajos">
+                    <img src="./assets/images/VAGO-02.jpg" alt="Taller Vago con personal trabajando">
                 </figure>
-                <figure class="gallery-item md soldadura">
+                <figure class="gallery-item gi-tall trabajos">
+                    <img src="./assets/images/VAGO-03.jpg" alt="Soldadura con arco eléctrico azul">
+                </figure>
+
+                <!-- Row 2: two singles (col 3 is occupied by tall item above) -->
+                <figure class="gallery-item trabajos">
+                    <img src="./assets/images/VAGO-06.jpg" alt="Soldador con luz púrpura">
+                </figure>
+                <figure class="gallery-item trabajos">
+                    <img src="./assets/images/VAGO-15.jpg" alt="Trabajador con cilindro de acero">
+                </figure>
+
+                <!-- Row 3: single | wide -->
+                <figure class="gallery-item trabajos">
+                    <img src="./assets/images/VAGO-17.jpg" alt="Soldadura de precisión">
+                </figure>
+                <figure class="gallery-item gi-wide productos">
+                    <img src="./assets/images/VAGO-35.jpg" alt="Pieza metálica terminada dorada">
+                </figure>
+
+                <!-- Row 4: wide | single -->
+                <figure class="gallery-item gi-wide trabajos">
+                    <img src="./assets/images/VAGO-09.jpg" alt="Soldadura en mesa de trabajo">
+                </figure>
+                <figure class="gallery-item gi-tall productos">
+                    <img src="./assets/images/VAGO-14.jpg" alt="Instalación de estructura metálica">
+                </figure>
+
+                <!-- Row 5: two singles (col 3 occupied by tall above) -->
+                <figure class="gallery-item trabajos">
                     <img src="./assets/images/VAGO-12.jpg" alt="Proceso de soldadura">
                 </figure>
-                <figure class="gallery-item sm soldadura tall">
-                    <img src="./assets/images/VAGO-03.jpg" alt="Trabajo de soldador en taller">
+                <figure class="gallery-item trabajos">
+                    <img src="./assets/images/VAGO-25.jpg" alt="Ajuste metálico">
                 </figure>
-                <figure class="gallery-item sm instalacion">
-                    <img src="./assets/images/VAGO-14.jpg" alt="Instalacion de estructura metalica">
+
+                <!-- Row 6: single | single | single -->
+                <figure class="gallery-item productos">
+                    <img src="./assets/images/VAGO-11.jpg" alt="Mesa metálica en armado">
                 </figure>
-                <figure class="gallery-item sm fabricacion">
-                    <img src="./assets/images/VAGO-18.jpg" alt="Fabricacion de campana de acero">
+                <figure class="gallery-item gi-wide trabajos">
+                    <img src="./assets/images/VAGO-08.jpg" alt="Equipo en proceso de instalación">
                 </figure>
-                <figure class="gallery-item lg fabricacion">
-                    <img src="./assets/images/VAGO-35.jpg" alt="Pieza metalica terminada">
+
+                <!-- Row 7: single | wide -->
+                <figure class="gallery-item productos">
+                    <img src="./assets/images/VAGO-18.jpg" alt="Campana de acero inoxidable">
                 </figure>
-                <figure class="gallery-item lg soldadura">
-                    <img src="./assets/images/VAGO-06.jpg" alt="Soldadura en acero inoxidable">
+                <figure class="gallery-item gi-wide productos">
+                    <img src="./assets/images/VAGO-23.jpg" alt="Estructura metálica instalada">
                 </figure>
-                <figure class="gallery-item lg instalacion">
-                    <img src="./assets/images/VAGO-08.jpg" alt="Equipo en proceso de instalacion">
-                </figure>
-                <figure class="gallery-item md instalacion">
-                    <img src="./assets/images/VAGO-23.jpg" alt="Detalle de estructura instalada">
-                </figure>
-                <figure class="gallery-item sm soldadura">
-                    <img src="./assets/images/VAGO-17.jpg" alt="Soldadura de precision">
-                </figure>
-                <figure class="gallery-item sm fabricacion">
-                    <img src="./assets/images/VAGO-11.jpg" alt="Mesa metalica en armado">
-                </figure>
-                <figure class="gallery-item md fabricacion">
-                    <img src="./assets/images/VAGO-30.jpg" alt="Trabajo de fabricacion en planta">
-                </figure>
-                <figure class="gallery-item md soldadura">
-                    <img src="./assets/images/VAGO-09.jpg" alt="Trabajador usando equipo de soldar">
-                </figure>
-                <figure class="gallery-item md instalacion">
-                    <img src="./assets/images/VAGO-25.jpg" alt="Ajuste de instalacion metalica">
-                </figure>
+
             </section>
         </main>
 
@@ -104,19 +131,28 @@
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><img src="./assets/svg/Facebook.svg" alt="Facebook"></a>
                         <a href="#" aria-label="Instagram"><img src="./assets/svg/Instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="TikTok"><img src="./assets/svg/Tik Tok.svg" alt="TikTok"></a>
                         <a href="#" aria-label="Ubicacion"><img src="./assets/svg/GoogleMaps.svg" alt="Ubicacion"></a>
                     </div>
                 </div>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p>All rights are reserved for ©hojalateriavago S.A. de C.V 2025</p>
-                <p><a href="terminos.html">User Terms & Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
+                <p>All rights are reserved for ©hojalatariavago S.A. de C.V 2025</p>
+                <p><a href="terminos.html">User Terms &amp; Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
             </div>
         </footer>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>

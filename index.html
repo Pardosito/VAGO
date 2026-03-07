@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="site-shell">
+        <div class="navbar-wrapper">
         <nav class="navbar">
             <a class="logo" href="index.html">
                 <img src="./assets/png/LogoPNG (1).png" alt="Hojalateria Vago Logo">
@@ -18,41 +19,65 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
             </ul>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contactanos.html">Contáctanos</a>
+        </div>
+        </div>
 
         <header class="hero">
-            <img src="./assets/images/VAGO-12.jpg" alt="Hojalateria Vago en operacion">
+            <img src="./assets/images/VAGO-12.jpg" alt="Hojalateria Vago fachada">
         </header>
 
-        <main class="page-content">
-            <section class="intro-grid">
-                <div class="intro-text">
-                    <span class="badge">Hojalateria Vago</span>
-                    <h1>Fabricamos soluciones en metal con precision y experiencia.</h1>
-                    <p>Disenamos y fabricamos piezas en acero inoxidable, galvanizado y otros metales para negocios, cocinas y proyectos industriales.</p>
-                    <a href="contactanos.html" class="btn btn-red">Solicitar cotizacion</a>
-                </div>
-                <div>
-                    <img class="service-img" src="./assets/images/VAGO-35.jpg" alt="Mesa metalica en taller">
+        <main>
+            <!-- Sección 1: Quiénes Somos -->
+            <section class="home-section">
+                <img src="./assets/images/VAGO-03.jpg" alt="Trabajo de soldadura en taller">
+                <div class="home-section-text">
+                    <span class="badge">Quienes somos</span>
+                    <h2>Nuestra historia</h2>
+                    <p>Hojalatería Vago es una empresa tijuanense especializada en trabajos de metal de alta calidad. Desde hace más de 30 años hemos apoyado a negocios, taquerías y proyectos industriales con soluciones hechas a la medida.</p>
+                    <a href="nosotros.html" class="btn btn-red">Conoce más</a>
                 </div>
             </section>
 
-            <section class="quick-links">
-                <article class="quick-link-card">
-                    <h4>Nosotros</h4>
-                    <p>Conoce nuestra historia, valores y experiencia en Tijuana.</p>
-                    <a href="nosotros.html">Ver mas</a>
-                </article>
-                <article class="quick-link-card">
-                    <h4>Servicios</h4>
-                    <p>Elaboramos, instalamos y reparamos piezas y equipos metalicos.</p>
-                    <a href="servicios.html">Ver mas</a>
-                </article>
-                <article class="quick-link-card">
-                    <h4>Galeria</h4>
-                    <p>Explora trabajos reales del taller en fabricacion y soldadura.</p>
-                    <a href="galeria.html">Ver mas</a>
-                </article>
+            <!-- Sección 2: Nuestros Servicios -->
+            <section class="home-section reverse">
+                <img src="./assets/images/VAGO-10.jpg" alt="Fabricación metalica en taller">
+                <div class="home-section-text">
+                    <span class="badge">Nuestros servicios</span>
+                    <h2>Conoce nuestras habilidades</h2>
+                    <p>Ofrecemos una amplia gama de servicios de hojalatería y fabricación metálica: desde mesas y mobiliario personalizado, hasta trompos para adobada, campanas con extractor, ductos y equipos industriales.</p>
+                    <a href="servicios.html" class="btn btn-red">Conoce más</a>
+                </div>
+            </section>
+
+            <!-- Separador decorativo -->
+            <div class="home-separator">
+                <img src="./assets/svg/SeparadorSVG.svg" alt="Separador">
+            </div>
+
+            <!-- Sección 3: Galería de trabajos -->
+            <section class="home-gallery-section">
+                <span class="badge">Que hacemos</span>
+                <h2>Nuestros Trabajos</h2>
+                <div class="home-gallery-strip">
+                    <img src="./assets/images/VAGO-06.jpg" alt="Trabajo en taller 1">
+                    <img src="./assets/images/VAGO-09.jpg" alt="Trabajo en taller 2">
+                    <img src="./assets/images/VAGO-12.jpg" alt="Trabajo en taller 3">
+                    <img src="./assets/images/VAGO-17.jpg" alt="Trabajo en taller 4">
+                    <img src="./assets/images/VAGO-22.jpg" alt="Trabajo en taller 5">
+                    <img src="./assets/images/VAGO-35.jpg" alt="Fachada Hojalateria Vago">
+                </div>
+                <a href="galeria.html" class="btn btn-red">Visita nuestra galería</a>
             </section>
         </main>
 
@@ -78,17 +103,26 @@
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><img src="./assets/svg/Facebook.svg" alt="Facebook"></a>
                         <a href="#" aria-label="Instagram"><img src="./assets/svg/Instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="TikTok"><img src="./assets/svg/Tik Tok.svg" alt="TikTok"></a>
                         <a href="#" aria-label="Ubicacion"><img src="./assets/svg/GoogleMaps.svg" alt="Ubicacion"></a>
                     </div>
                 </div>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p>All rights are reserved for ©hojalateriavago S.A. de C.V 2025</p>
-                <p><a href="terminos.html">User Terms & Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
+                <p>All rights are reserved for ©hojalatariavago S.A. de C.V 2025</p>
+                <p><a href="terminos.html">User Terms &amp; Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
             </div>
         </footer>
     </div>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>

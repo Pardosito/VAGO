@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="site-shell">
+        <div class="navbar-wrapper">
         <nav class="navbar">
             <a class="logo" href="index.html">
                 <img src="./assets/png/LogoPNG (1).png" alt="Hojalateria Vago Logo">
@@ -18,7 +19,19 @@
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="contactanos.html">Contáctanos</a></li>
             </ul>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contactanos.html">Contáctanos</a>
+        </div>
 
         <header class="hero">
             <img src="./assets/images/VAGO-03.jpg" alt="Terminos y condiciones">
@@ -82,17 +95,26 @@
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><img src="./assets/svg/Facebook.svg" alt="Facebook"></a>
                         <a href="#" aria-label="Instagram"><img src="./assets/svg/Instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="TikTok"><img src="./assets/svg/Tik Tok.svg" alt="TikTok"></a>
                         <a href="#" aria-label="Ubicacion"><img src="./assets/svg/GoogleMaps.svg" alt="Ubicacion"></a>
                     </div>
                 </div>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <p>All rights are reserved for ©hojalateriavago S.A. de C.V 2025</p>
-                <p><a href="terminos.html">User Terms & Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
+                <p>All rights are reserved for ©hojalatariavago S.A. de C.V 2025</p>
+                <p><a href="terminos.html">User Terms &amp; Conditions</a> | <a href="privacidad.html">Privacy Policy</a></p>
             </div>
         </footer>
     </div>
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('open');
+                menu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>
