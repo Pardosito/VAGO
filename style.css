@@ -381,6 +381,7 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.15rem;
     margin-top: 1.2rem;
+    align-items: stretch;
 }
 
 .value-card {
@@ -388,7 +389,13 @@ a {
     color: var(--white);
     border-radius: 1.3rem;
     text-align: center;
-    padding: 2rem 1.2rem;
+    padding: 1.5rem 1.2rem;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .value-card img {
@@ -477,6 +484,7 @@ a {
     border-radius: 1.25rem;
     object-fit: cover;
     display: block;
+    max-height: 10rem;
 }
 
 .cta-banner {
@@ -940,12 +948,19 @@ textarea.form-control {
 @media (max-width: 800px) {
     .site-shell {
         max-width: none;
+        padding-top: calc(env(safe-area-inset-top) + 5.2rem);
     }
 
     .navbar-wrapper {
-        position: sticky;
+        position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         padding: 0.6rem 0.8rem;
+        padding-top: calc(env(safe-area-inset-top) + 0.6rem);
+        padding-bottom: 0.55rem;
+        background: var(--surface);
+        z-index: 220;
     }
 
     .navbar {
@@ -954,7 +969,7 @@ textarea.form-control {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: auto;
+        min-height: 4.2rem;
     }
 
     .logo {
@@ -1021,10 +1036,19 @@ textarea.form-control {
         flex-direction: column;
         background: var(--white);
         border-radius: 1rem;
-        margin: 0.3rem 0;
+        margin: 0;
+        position: fixed;
+        left: 0.8rem;
+        right: 0.8rem;
+        top: calc(env(safe-area-inset-top) + 5rem);
         padding: 0.4rem 1.2rem;
+        padding-bottom: calc(0.4rem + env(safe-area-inset-bottom));
         box-shadow: 0 4px 20px rgba(12,18,26,0.12);
         gap: 0;
+        max-height: calc(100dvh - (env(safe-area-inset-top) + 5.6rem));
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 210;
     }
 
     .mobile-menu.open {
@@ -1051,7 +1075,7 @@ textarea.form-control {
     }
 
     .hero {
-        margin-top: -4rem;
+        margin-top: 0;
     }
 
     .page-content {
