@@ -739,6 +739,7 @@ textarea.form-control {
     overflow: hidden;
     border-radius: 1rem;
     transition: opacity 0.2s ease;
+    cursor: zoom-in;
 }
 
 .gallery-item img {
@@ -748,12 +749,81 @@ textarea.form-control {
     display: block;
 }
 
+.gallery-item:focus-visible {
+    outline: 3px solid var(--accent-red);
+    outline-offset: 3px;
+}
+
 /* Explicit size modifiers */
 .gi-wide { grid-column: span 2; }
 .gi-tall { grid-row: span 2; }
 
 .gallery-item.is-hidden {
     display: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.image-preview-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background: rgba(10, 19, 31, 0.82);
+    z-index: 500;
+}
+
+.image-preview-modal.open {
+    display: flex;
+}
+
+.image-preview-dialog {
+    position: relative;
+    width: min(92vw, 58rem);
+    max-height: 90vh;
+    background: var(--white);
+    border-radius: 1.2rem;
+    padding: 0.9rem 0.9rem 1rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.image-preview-image {
+    width: 100%;
+    max-height: calc(90vh - 5.2rem);
+    object-fit: contain;
+    border-radius: 0.8rem;
+    display: block;
+    background: #e6ebf2;
+}
+
+.image-preview-caption {
+    margin-top: 0.8rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.image-preview-close {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(16, 38, 63, 0.9);
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-preview-close:hover {
+    background: var(--accent-red);
 }
 
 /* ─── LEGAL PAGES ─────────────────────────────────────────── */
@@ -816,22 +886,33 @@ textarea.form-control {
 }
 
 .footer-col h4 {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
     color: #edf4ff;
 }
 
 .footer-col ul {
     list-style: none;
+    display: grid;
+    gap: 0.45rem;
 }
 
 .footer-col li {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
 }
 
 .footer-col a,
 .footer-col p {
     color: #b7c8df;
     text-decoration: none;
+}
+
+.footer-col ul a,
+.footer-col p {
+    line-height: 1.65;
+}
+
+.footer-col p {
+    margin-bottom: 0.45rem;
 }
 
 .footer-col a:hover {
@@ -1100,8 +1181,34 @@ textarea.form-control {
         display: grid;
     }
 
+    .site-footer,
+    .footer-top,
+    .footer-col,
     .footer-bottom {
-        justify-content: flex-start;
+        text-align: center;
+    }
+
+    .footer-top {
+        justify-items: center;
+    }
+
+    .footer-brand {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .footer-col ul {
+        justify-items: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        align-items: center;
     }
 
     .cta-banner {
